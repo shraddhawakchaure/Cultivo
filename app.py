@@ -36,6 +36,7 @@ def do_the_math():
     potassium = int(request.form.get('K'))
     moist = int(request.form.get('moist'))
     Weather_obj = fetch_weather(location)
+    # open_street_map(Weather_obj)
     if(Weather_obj == 'NOT_FOUND'):
         return render_template('homePage.html', result="Invalid City. Please Retry!")
     temperature = Weather_obj['temp']
@@ -75,6 +76,8 @@ def open_street_map():
     Weather_obj = fetch_weather(location)
     latitude = Weather_obj['lat']
     longitude = Weather_obj['lon']
+    print(latitude)
+    print(longitude)
     markers={
    'lat':latitude,
    'lon':longitude,
@@ -92,7 +95,7 @@ def open_street_map():
         tooltip="Click Here!"
     ).add_to(map)
     
-    return map.repr_html()
+    return map._repr_html_()
 
 @app.route('/login',methods=["GET","POST"])
 def login():
