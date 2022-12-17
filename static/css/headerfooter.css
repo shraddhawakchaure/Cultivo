@@ -11,7 +11,7 @@ body{
 
 /* button */
 .bg-primary{
-    background-color: var(--pink)!important;
+    background-color: #68B984;
 
 }
 
@@ -23,9 +23,9 @@ body{
     border: 1px solid rgb(85, 85, 85);
 }
 .btn:not(.nav-btns button):hover{
-    background-color: var(--pink);
+    background-color: #68B984;
     color: #fff;
-    border-color: var(--pink);
+    border-color: #68B984;
 }
 
 /* text color */
@@ -36,7 +36,7 @@ body{
 /* navbar */
 
 .logo-title{
-  font-size: 15px;
+  font-size: 40px;
 }
 .navbar{
     -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
@@ -55,9 +55,7 @@ body{
 }
 .nav-item{
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
-    font-size: small;
 }
-
 
 /* about */
 #about{
@@ -67,30 +65,32 @@ body{
 
 /* footer */
 footer{
-  background-color: #68B984;
-  margin-top: 90px;
-  margin-bottom: 0px;
-  padding-bottom: 5px;
-}
-footer .brand{
-    font-family: var(--lg-font);
-    letter-spacing: 2px;
-}
-footer a{
-    -webkit-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-    transition: color 0.3s ease;
-}
-footer a:hover{
-    color: var(--pink)!important;
-}
-
-.copyright{
-  text-align: center;
-}
-/* media queries */
-@media(min-width: 992px){
-    .nav-item{
-        border-bottom: none;
-    }
-}
+    background-color: #68B984;
+    /* color: */
+    margin-top: 100px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+  }
+  footer .brand{
+      font-family: var(--lg-font);
+      letter-spacing: 2px;
+  }
+  footer a{
+      -webkit-transition: color 0.3s ease;
+      -o-transition: color 0.3s ease;
+      transition: color 0.3s ease;
+  }
+  footer a:hover{
+      color: var(--pink)!important;
+  }
+  
+  .copyright{
+    text-align: center;
+    height: 10px;
+  }
+  /* media queries */
+  @media(min-width: 992px){
+      .nav-item{
+          border-bottom: none;
+      }
+  }

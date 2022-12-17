@@ -3,6 +3,7 @@ import pickle
 import requests
 import math
 import sqlite3
+import folium 
 
 app = Flask(__name__)
 app.secret_key="123"
@@ -19,9 +20,14 @@ def index():
 @app.route("/home")
 def home():
     return render_template('homePage.html')
+
+@app.route("/aboutus")
+def about():
+    return render_template('About.html')
  
 @app.route("/home", methods=['POST'])
 def do_the_math():
+    global location
     location = request.form.get('loc')
     soil_type = int(request.form.get('soil_type'))
     crop_type = int(request.form.get('crop_type'))
@@ -34,6 +40,7 @@ def do_the_math():
         return render_template('homePage.html', result="Invalid City. Please Retry!")
     temperature = Weather_obj['temp']
     humidity = Weather_obj['humidity']
+    
     input = [temperature, humidity, moist, soil_type, crop_type, nitrogen, potassium, phosphorus]
     print(input)
     output = model.predict([input])
@@ -51,10 +58,41 @@ def fetch_weather(location):
     temp = response['main']['temp']
     temp = math.floor(temp-273.15)  # Convert to °C
     humidity = response['main']['humidity']
+    lat = response['coord']['lat']
+    lon = response['coord']['lon']
     return {
         'temp': temp,
-        'humidity': humidity
+        'humidity': humidity,
+        'lat': lat,
+        'lon': lon
     }
+
+
+@app.route("/openStreetMap")
+def open_street_map():
+    # this map using stamen toner
+    #location = request.form.get('loc')
+    Weather_obj = fetch_weather(location)
+    latitude = Weather_obj['lat']
+    longitude = Weather_obj['lon']
+    markers={
+   'lat':latitude,
+   'lon':longitude,
+   'popup': location
+    }
+    map = folium.Map(
+        location=[markers['lat'],markers['lon']],
+        #tiles='Stamen Toner',
+        zoom_start=13
+    )
+
+    folium.Marker(
+        location=[markers['lat'],markers['lon']],
+        popup=markers['popup'],
+        tooltip="Click Here!"
+    ).add_to(map)
+    
+    return map.repr_html()
 
 @app.route('/login',methods=["GET","POST"])
 def login():
@@ -74,11 +112,6 @@ def login():
         else:
             flash("Username and Password Mismatch","danger")
     return render_template('login.html')
-
-
-@app.route('/customer',methods=["GET","POST"])
-def customer():
-    return render_template("customer.html")
 
 @app.route('/register',methods=['GET','POST'])
 def register():
