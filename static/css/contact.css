@@ -1,0 +1,16 @@
+form{
+    margin: 5%;
+    padding: 5%;
+}
+
+.checked {  
+    color : yellow;  
+    font-size : 20px;  
+}  
+.unchecked {  
+    font-size : 20px;  
+}  
+
+nav{
+    position: fixed;
+}

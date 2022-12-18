@@ -22,12 +22,16 @@ body{
     border-radius: 25px;
     border: 1px solid rgb(85, 85, 85);
 }
-.btn:not(.nav-btns button):hover{
+.submit-btn:not(.nav-btns button) {
     background-color: #68B984;
     color: #fff;
     border-color: #68B984;
 }
-
+.submit-btn:not(.nav-btns button):hover {
+    background-color: white;
+    color: black;
+    
+}
 /* text color */
 .text-primary{
     color: var(--pink)!important;

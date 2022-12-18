@@ -53,12 +53,12 @@
               </button>
 
               <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
-                  <ul class = "navbar-nav mx-auto text-center">
+                  <ul class = "navbar-nav mx-auto text-center" style="font-size: 15px">
                       <li class = "nav-item px-2 py-2">
-                          <a class = "nav-link text-uppercase text-dark" href = "http://localhost:5000/home">home</a>
+                          <a class = "nav-link text-uppercase text-dark" href = "#">home</a>
                       </li>
                       <li class = "nav-item px-2 py-2">
-                          <a class = "nav-link text-uppercase text-dark" href = "#">contact Us</a>
+                          <a class = "nav-link text-uppercase text-dark" href = "http://localhost:5000/contactus">contact Us</a>
                       </li>
                       <li class = "nav-item px-2 py-2 active">
                           <a class = "nav-link text-uppercase text-dark" href = "http://localhost:5000/aboutus">About Us</a>
@@ -173,14 +173,14 @@
                 <br> 
                 <div class="row">
                     <div class="col-md-12">
-                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block" value="Submit" >
+                    <input type="submit" class="btn submit-btn btn-success btn-send  pt-2 btn-block" style="font-weight: 300;" value="Submit" >
                     </div>
                 </div>
                 <br> 
                 {% if result %}
-                <div class="card text-center" id="destination_div">
-                    <div class="card-body">
-                      <p class="card-text"><h2>{{ result }}</h2></p>
+                <div class="card text-center" id="destination_div" style="background-color: #68B984;">
+                    <div class="card-body" style="color: white;">
+                      <p class="card-text"><h2 style="font-size:large;">{{ result }}</h2></p>
                       <a href="http://localhost:5000/openStreetMap" class="btn btn-primary">Show nearby shops</a>
                     </div>
                 </div>
@@ -227,16 +227,16 @@
     <!-- footer -->
     <section id="foot-data">
       <footer class = " py-5">
-          <div class = "container">
+          <div class = "container" style="font-size: 15px">
               <div class = "row text-white g-4">
                   <div class = "col-md-6 col-lg-3">
-                    <i class="fa-sharp fa-solid fa-spa fa-2x logo-icon align-items-center"></i>
-                      <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">CULTIVO</a>
+                    <h2><i class="fa-sharp fa-solid fa-spa fa-2x logo-icon align-items-center"></i>
+                      <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">CULTIVO</a></h2>
                       <p class = "text-black mt-3">A web application that can reside in both your mobile phone and laptop device which provides you with infomation of proper fertilizer needed to be used.</p>
                   </div>
 <!-- text-muted -->
                   <div class = "col-md-6 col-lg-3">
-                      <h5 class = "fw-light">Links</h5>
+                      <h2 class = "fw-light">Links</h2>
                       <ul class = "list-unstyled ">
                           <li class = "my-3">
                               <a href = "#" class = " text-decoration-none text-black">
@@ -262,7 +262,7 @@
                   </div>
 
                   <div class = "col-md-6 col-lg-3">
-                      <h5 class = "fw-light mb-3">Contact Us</h5>
+                      <h2 class = "fw-light mb-3">Contact Us</h2>
                       <div class = "d-flex justify-content-start align-items-start my-2 text-black">
                           <span class = "me-3">
                               <i class = "fas fa-map-marked-alt"></i>
@@ -290,7 +290,7 @@
                   </div>
 
                   <div class = "col-md-6 col-lg-3">
-                      <h5 class = "fw-light mb-3">Follow Us</h5>
+                      <h2 class = "fw-light mb-3">Follow Us</h2>
                       <div>
                           <ul class = "list-unstyled d-flex">
                               <li>

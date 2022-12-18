@@ -6,27 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="../static/css/visit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div>
     <header class="header">
-        <a class="logo" href="#">CULTIVO</a>
-        <input type="checkbox" id="menu-btn" class="menu-btn">
+
+        <a class="logo" href="#"><i class="fa-sharp fa-solid fa-spa fa-1x logo-icon align-items-center"></i>&nbspCULTIVO</a>
         <label class="menu-icon" for="menu-btn">
             <span class="nav-icon"></span>
         </label>
         <ul class="menu">
-            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="http://localhost:5000/register">Register</a></li>
             <li><a href="http://localhost:5000/login">Login</a></li>
+
         </ul>
     </header>
-    <br>
-    <br>
 <div class="container carousel-cont">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -36,31 +39,31 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-         
+
       <div class="item active">
-        <img src="../static/images/visit1.jpeg" alt="Los Angeles" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Los Angeles</h3>
-          <p>LA is always so much fun!</p>
+        <img src="static/images/visit1.jpg" alt="Los Angeles" style="width:100%; height:80%">
+        <div class="carousel-caption" style="background-color:#68B984; margin-bottom:25%;">
+          <h2>Fertilizers Prediction</h2>
+          <p style="font-size:20px">Get suitable fertilizer type based on soil type & climate conditions! 😍</p>
         </div>
       </div>
 
       <div class="item">
-        <img src="../static/images/visit2.jpg" alt="Chicago" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago!</p>
+        <img src="static/images/visit2.jpeg" alt="Chicago" style="width:100%; height:80%">
+        <div class="carousel-caption" style="background-color:#68B984; margin-bottom:25%;">
+          <h2>Nearby Shops Recommendation</h2>
+          <p style="font-size:20px">Locate nearby shops on a click. 🏪</p>
         </div>
       </div>
-    
+
       <div class="item">
-        <img src="../static/images/visit3.jpg" alt="New York" style="width:100%;">
-        <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>We love the Big Apple!</p>
+        <img src="static/images/visit3.jpeg" alt="New York" style="width:100%; height:80%">
+        <div class="carousel-caption " style="background-color:#68B984; margin-bottom:25%;">
+          <h2>Brands Recommendation</h2>
+          <p style="font-size:20px">Get fertilizer brand recommendations for predicted fertilizer type! 🤩 </p>
         </div>
       </div>
-  
+
     </div>
 
     <!-- Left and right controls -->
@@ -75,5 +78,103 @@
   </div>
 </div>
 </div>
+
+
+
+
+
+<!-- bg-dark -->
+    <!-- footer -->
+    <section id="foot-data">
+      <footer class = " py-5">
+          <div class = "container">
+              <div class = "row text-white g-4">
+                  <div class = "col-md-6 col-lg-4">
+                    <i class="fa-sharp fa-solid fa-spa fa-2x logo-icon align-items-center"></i>
+                      <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">CULTIVO</a>
+                      <p class = "text-black mt-3">A web application that can reside in both your mobile phone and laptop device which provides you with infomation of proper fertilizer needed to be used.</p>
+                  </div>
+<!-- text-muted -->
+
+
+                  <div class = "col-md-6 col-lg-4">
+                      <h5 class = "fw-light mb-3">Contact Us</h5>
+                      <div class = "d-flex justify-content-start align-items-start my-2 text-black">
+                          <span class = "me-3">
+                              <i class = "fas fa-map-marked-alt"></i>
+                          </span>
+                          <span class = "fw-light">
+                              Dhankawadi, Pune, 411043, India
+                          </span>
+                      </div>
+                      <div class = "d-flex justify-content-start align-items-start my-2 text-black">
+                          <span class = "me-3">
+                              <i class = "fas fa-envelope"></i>
+                          </span>
+                          <span class = "fw-light">
+                              cultivo.support@gmail.com
+                          </span>
+                      </div>
+                      <div class = "d-flex justify-content-start align-items-start my-2 text-black">
+                          <span class = "me-3">
+                              <i class = "fas fa-phone-alt"></i>
+                          </span>
+                          <span class = "fw-light">
+                              +9786 6776 236
+                          </span>
+                      </div>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-4">
+                      <h5 class = "fw-light mb-3">Follow Us</h5>
+                      <div>
+                          <ul class = "list-unstyled d-flex">
+                              <li>
+                                  <a href = "#" class = "text-black text-decoration-none fs-4 me-4">
+                                      <i class = "fab fa-facebook-f"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href = "#" class = "text-black text-decoration-none fs-4 me-4">
+                                      <i class = "fab fa-twitter"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href = "#" class = "text-black text-decoration-none fs-4 me-4">
+                                      <i class = "fab fa-instagram"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href = "#" class = "text-black text-decoration-none fs-4 me-4">
+                                      <i class = "fab fa-pinterest"></i>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </footer>
+    </section>
+
+    <div class="copyright">
+      <p>Made with ❤️ in India</p>
+    </div>
+    <!-- end of footer -->
+
+
+
+
+    <!-- jquery -->
+    <script src = "js/jquery-3.6.0.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/c225c1452e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src = "js/script.js"></script>
 </body>
 </html>

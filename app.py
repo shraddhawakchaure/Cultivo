@@ -24,6 +24,10 @@ def home():
 @app.route("/aboutus")
 def about():
     return render_template('About.html')
+
+@app.route("/contactus")
+def contact():
+    return render_template('Contact.html')
  
 @app.route("/home", methods=['POST'])
 def do_the_math():

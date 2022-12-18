@@ -13,8 +13,9 @@ label {
 .prediction-block {
     height: 30%;
 }
-.btn :hover{
-    color: #68B984;
+.submit-btn :hover{
+    color: white;
+    background-color: #68B984;
 }
 
 .btn-send {

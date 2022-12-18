@@ -11,13 +11,25 @@ body {
  font-family: 'Montserrat', sans-serif;
       }
 
+
+			@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+			:root{
+			    --lg-font: 'Kaisei Tokumin', serif;
+			    --sm-font: 'Poppins', sans-serif;
+			    --pink: #e5345b;
+			}
+			body{
+			    font-family: var(--sm-font);
+			}
+
 .header {
 	position: fixed;
 	z-index: 111;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: #fff;
+	background: #68B984;
 }
 .header ul {
 	list-style: none;
@@ -31,7 +43,7 @@ body {
 	padding: 10px;
 	float: left;
 	display: block;
-	color: green;
+	color: black;
 	font-weight: 700;
 }
 .header .menu a {
@@ -50,7 +62,7 @@ body {
 	color: green;
 }
 .header .menu a:hover {
-	color: rgb(5, 5, 5);
+	color: green;
 }
 .header .menu-icon {
 	position: relative;
@@ -103,7 +115,9 @@ body {
 	top: 0;
 }
 .carousel-cont {
+	margin-top: 80px;
 	height: 100px;
+	/* width: 100%; */
 }
 /* .banner {
 	background-image: url(1.jpg);
@@ -142,7 +156,7 @@ body {
 	}
 	.header .menu a {
 		all: unset;
-		color: #008000;
+		color: #000;
 	}
 	.header .menu {
 		all: unset;
@@ -177,4 +191,49 @@ body {
 		text-align: left;
 		padding-left: 5%;
 	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer{
+  background-color: #68B984;
+  /* color: */
+  margin-top: 670px;
+  margin-bottom: 0px;
+	padding-top: 12px;
+  padding-bottom: 5px;
+	height: 30%;
+}
+footer .brand{
+    font-family: var(--lg-font);
+    letter-spacing: 2px;
+}
+footer a{
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+footer a:hover{
+    color: var(--pink)!important;
+}
+
+.copyright{
+  text-align: center;
+  height: 10px;
+}
+/* media queries */
+ @media(max-width: 992px){
+    .footer{
+        margin-top:300px;
+    }
 }
