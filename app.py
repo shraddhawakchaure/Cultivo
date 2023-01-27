@@ -28,6 +28,10 @@ def about():
 @app.route("/contactus")
 def contact():
     return render_template('Contact.html')
+
+@app.route("/browseproducts")
+def browse_products():
+    return render_template('BrowseProducts.html')
  
 @app.route("/home", methods=['POST'])
 def do_the_math():

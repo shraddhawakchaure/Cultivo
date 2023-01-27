@@ -1,0 +1,37 @@
+.card-title {
+    background-color: #68B984;
+    text-align: center;
+    font-weight: bolder;
+}
+.card-img {
+    padding-top: 3px;
+    width: 98%;
+    height: 60%;
+    align-self: center;
+}
+.card {
+    width: 24rem;
+    height: 32rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(12, 16, 31, 0.4);
+    margin: 15px 16px;
+}
+
+.card:hover {
+    border-color: #68B984;
+    border-width: 10px;
+}
+
+#soil_type {
+    border: 1px solid #333;
+    font-size: 18px;
+    padding: 12px 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-color: #68B984;
+}
+ul#page-list li {
+  display:inline;
+  align-items: center;
+}
+.top-buffer { margin-top:20px; }

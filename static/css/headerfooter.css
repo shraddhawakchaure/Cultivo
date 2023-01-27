@@ -55,7 +55,7 @@ body{
     font-family: var(--lg-font);
 }
 .nav-link:hover{
-    color: var(--pink)!important;
+    color: aliceblue!important;
 }
 .nav-item{
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
