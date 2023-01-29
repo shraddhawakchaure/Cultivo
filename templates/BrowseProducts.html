@@ -22,8 +22,10 @@
     <link rel = "stylesheet" href = "../static/css/homePage.css">
     <link rel = "stylesheet" href = "../static/css/headerfooter.css">
     <link rel="stylesheet" href="../static/css/browseproducts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body onload="onPageLoad()">
 <!-- bg-white -->
     <!-- navbar -->
     <section id = "navigation">
@@ -87,19 +89,21 @@
 
 
 <section>
-    <div class="container col-xxl-8 px-4 py-3" style="margin-top: 100px; row-gap: 1rem;">
+    <div class="container col-xxl-8 px-4 py-3" style="margin-top: 100px;">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <input type="text" placeholder="Start typing to search..." id="soil_type" class="filter" onkeyup="getResults()">
-        <!-- <select id="soil_type" name="soil_type" class="form-control btn btn-block" type="button" required="required" data-error="Please specify Soil Type.">
-            <option value="none" selected disabled hidden>Select Fertilizer Type</option>
-            <option value='0'>UREA</option>
-            <option value='1'>DAP</option>
-            <option value='2'>14-35-14</option>
-            <option value='3'>28-28</option>
-            <option value='4'>17-17-17</option>
-            <option value='3'>20-20</option>
-            <option value='4'>10-26-26</option>
-        </select> -->
+        <!-- <input type="text" placeholder="Start typing to search..." id="soil_type" class="filter" onkeyup="getResults()"> -->
+        <select id="fertilizer_type_bp" name="fertilizer_type" class="form-control btn btn-block" type="button" onchange="getResults(this)">
+            <optgroup label="Type" class="type_slct">
+                <option value="none">Select Fertilizer Type</option>
+                <option value='UREA'>UREA</option>
+                <option value='DAP'>DAP</option>
+                <option value='14-35-14'>14-35-14</option>
+                <option value='28-28'>28-28</option>
+                <option value='17-17-17'>17-17-17</option>
+                <option value='20-20'>20-20</option>
+                <option value='10-26-26'>10-26-26</option>
+            </optgroup>
+        </select>
         </div>
         <div class="card-lists" id="card-lists">
         <div class="row top-buffer">
@@ -109,7 +113,7 @@
                     <h6 class="card-title">Urea</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -118,7 +122,7 @@
                     <h6 class="card-title">DAP</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a></div>
+                    <a href="#">More Details</a></div>
             </div>
             <div class="card">
                 <img class="card-img-top card-img" src="../static/images/28-28/1.jfif" alt="Card image cap">
@@ -126,7 +130,7 @@
                     <h6 class="card-title">28-28</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -135,7 +139,7 @@
                     <h6 class="card-title">20-20</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -144,7 +148,7 @@
                     <h6 class="card-title">17-17-17</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -153,7 +157,7 @@
                     <h6 class="card-title">14-35-14</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -162,7 +166,7 @@
                     <h6 class="card-title">10-26-26</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -171,7 +175,7 @@
                     <h6 class="card-title">Urea</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card col-md-4">
@@ -180,7 +184,7 @@
                     <h6 class="card-title">Urea</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -189,7 +193,7 @@
                     <h6 class="card-title">DAP</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -198,7 +202,7 @@
                     <h6 class="card-title">28-28</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -207,7 +211,7 @@
                     <h6 class="card-title">20-20</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card col-md-4">
@@ -216,7 +220,7 @@
                     <h6 class="card-title">17-17-17</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -225,7 +229,7 @@
                     <h6 class="card-title">14-35-14</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -234,7 +238,7 @@
                     <h6 class="card-title">10-26-26</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -243,7 +247,7 @@
                     <h6 class="card-title">10-26-26</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card col-md-4">
@@ -252,7 +256,7 @@
                     <h6 class="card-title">DAP</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -261,7 +265,7 @@
                     <h6 class="card-title">DAP</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -270,7 +274,7 @@
                     <h6 class="card-title">20-20</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -279,7 +283,7 @@
                     <h6 class="card-title">20-20</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card col-md-4">
@@ -288,7 +292,7 @@
                     <h6 class="card-title">28-28</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -297,7 +301,7 @@
                     <h6 class="card-title">17-17-17</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -306,7 +310,7 @@
                     <h6 class="card-title">17-17-17</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
             <div class="card">
@@ -315,7 +319,7 @@
                     <h6 class="card-title">20-20</h6>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis risus a consectetur rhoncus. Cras a neque a metus laoreet interdum ut a erat.
                     <br>
-                    <a href="#">View More</a>
+                    <a href="#">More Details</a>
                 </div>
             </div>
         </div>

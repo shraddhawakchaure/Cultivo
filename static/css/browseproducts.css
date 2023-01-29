@@ -2,6 +2,7 @@
     background-color: #68B984;
     text-align: center;
     font-weight: bolder;
+    padding: 2px;
 }
 .card-img {
     padding-top: 3px;
@@ -11,7 +12,7 @@
 }
 .card {
     width: 24rem;
-    height: 32rem;
+    height: 33rem;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(12, 16, 31, 0.4);
     margin: 15px 16px;
@@ -22,16 +23,21 @@
     border-width: 10px;
 }
 
-#soil_type {
+#fertilizer_type_bp {
     border: 1px solid #333;
-    font-size: 18px;
+    font-size: 15px;
     padding: 12px 10px;
     margin: 10px 0;
     width: 100%;
+    height: fit-content;
     border-color: #68B984;
+}
+#fertilizer_type_bp.type_slct:hover {
+    color: #68B984;
 }
 ul#page-list li {
   display:inline;
   align-items: center;
 }
+
 .top-buffer { margin-top:20px; }

@@ -183,7 +183,8 @@
                 {% if result %}
                 <div class="card text-center" id="destination_div" style="background-color: #68B984;">
                     <div class="card-body" style="color: white;">
-                      <p class="card-text"><h2 style="font-size:large;">{{ result }}</h2></p>
+                      <p class="card-text"><h2 style="font-size:large;"> Use {{ result }}  for higher product yields!!</h2></p>
+                      <a class="btn btn-primary" onclick="getProducts(result='{{ result }}')">Browse Products</a>
                       <a href="http://localhost:5000/openStreetMap" class="btn btn-primary">Show nearby shops</a>
                     </div>
                 </div>
@@ -341,5 +342,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
         <!-- custom js -->
         <script src = "../static/js/chatbot.js"></script>
+        <script src="../static/js/browseproducts.js"></script>
     </body>
     </html>

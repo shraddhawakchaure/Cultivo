@@ -54,7 +54,7 @@ def do_the_math():
     print(input)
     output = model.predict([input])
     print(output)
-    return render_template('homePage.html', result='Use '+output[0]+' for higher product yields!!')
+    return render_template('homePage.html', result=output[0])
 
 
 def fetch_weather(location):
