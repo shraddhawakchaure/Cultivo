@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "static/css/FeedbackPage.css">
+    <style>
+      .card-title {
+          background-color: #68B984;
+          text-align: center;
+          font-weight: bolder;
+          padding: 2px;
+      }
+      .card {
+    width: 14rem;
+    height: 20rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(12, 16, 31, 0.4);
+    margin: 15px 16px;
+}
+
+.card:hover {
+    border-color: #a9daba;
+    border-width: 10px;
+}
+    </style>
+</head>
+<body>
+<!-- bg-white -->
+    <!-- navbar -->
+    <section id = "navigation">
+      <div class="container-fluid">
+
+      <nav class = "navbar navbar-expand-lg navbar-light  py-4 fixed-top">
+          <div class = "container">
+              <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                  <i class="fa-sharp fa-solid fa-spa fa-3x logo-icon align-items-center"></i>
+                  <span class = "text-uppercase fw-lighter ms-2 logo-title">CULTIVO</span>
+              </a>
+
+              <div class = "order-lg-2 nav-btns">
+                <div class="dropdown text-end">
+                  <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://avatars.githubusercontent.com/u/92664718?v=4" alt="mdo" width="32" height="32" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small">
+                    <li><a class="dropdown-item" href="#">My Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                  <span class = "navbar-toggler-icon"></span>
+              </button>
+
+              <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                  <ul class = "navbar-nav mx-auto text-center">
+                      <li class = "nav-item px-2 py-2">
+                          <a class = "nav-link text-uppercase text-dark" href = "#header">home</a>
+                      </li>
+                      <li class = "nav-item px-2 py-2">
+                          <a class = "nav-link text-uppercase text-dark" href = "#collection">contact Us</a>
+                      </li>
+                      <li class = "nav-item px-2 py-2">
+                          <a class = "nav-link text-uppercase text-dark" href = "#special">About Us</a>
+                      </li>
+                      <!-- <li class = "nav-item px-2 py-2">
+                          <a class = "nav-link text-uppercase text-dark" href = "#blogs">blogs</a>
+                      </li>
+                      <li class = "nav-item px-2 py-2">
+                          <a class = "nav-link text-uppercase text-dark" href = "#about">about us</a>
+                      </li>
+                      <li class = "nav-item px-2 py-2 border-0">
+                          <a class = "nav-link text-uppercase text-dark" href = "#popular">popular</a>
+                      </li> -->
+                  </ul>
+              </div>
+          </div>
+      </nav>
+    </div>
+  </section>
+
+    <!-- end of navbar -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <body class="bg-light"> -->
+<section>
+
+
+    <div class="container" >
+      <!-- style = "width:30%; height:50%;" -->
+      <main>
+        <div class="py-5 text-center " style="margin:0%; padding-bottom:0%;">
+          <img class="d-block mx-auto mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+          <h2>Please Share Your Experience With Cultivo Here!!</h2>
+          <!-- <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-7 col-lg-6">
+              <img style="width:90%; height:90%;" src="static/images/farmerFeedback.webp" alt="">
+          </div>
+
+          <div class="col-md-7 col-lg-6 feedback-form" >
+            <h4 class="mb-3">Give Your Feedback Here</h4>
+            <form class="needs-validation" method = "post" action="http://127.0.0.1:5000/contactus" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-4">
+                  <label for="firstName" class="form-label">Crop Grown</label>
+                  <select class="form-select" id="state" name = "crop" required>
+                    <option value="">Choose...</option>
+                    <option>Barley</option>
+                    <option>Cotton</option>
+                    <option>Ground Nuts</option>
+                    <option>Maize</option>
+                    <option>Millets</option>
+                    <option>Oil seeds</option>
+                    <option>Paddy</option>
+                    <option>Pulses</option>
+                    <option>Sugarcane</option>
+                    <option>Tobacco</option>
+                    <option>Wheat</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4">
+                  <label for="lastName" class="form-label">Fertilizer Used</label>
+                  <select class="form-select" id="state" name = "fertilizer" required>
+                    <option value="">Choose...</option>
+                    <option>Urea</option>
+                    <option>DAP</option>
+                    <option>14-35-14</option>
+                    <option>28-28</option>
+                    <option>17-17-17</option>
+                    <option>20-20</option>
+                    <option>10-26-26</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4">
+                  <label for="state" class="form-label">Soil Type</label>
+                  <select class="form-select" id="state" name = "soil" required>
+                    <option value="">Choose...</option>
+                    <option>Sandy</option>
+                    <option>Loamy</option>
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Clayey</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="bdaymonth" class="form-label">Date</label>
+                  <input type="month" class="form-control" id="bdaymonth" name="date">
+                  <!-- <label for="firstName" class="form-label">Crop Grown</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required> -->
+                  <!-- <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div> -->
+                </div>
+
+
+                <div class="col-sm-6">
+                  <label for="lastName" class="form-label">City</label>
+                  <input type="text" class="form-control" id="lastName" name = "city" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+
+
+
+
+                <div class="col-sm-6">
+                  <label for="quantity" class="form-label">Area of Crop (Acres)</label>
+                  <input type="number" class="form-control" id="quantity" name="cropArea" >
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="quantity" class="form-label">Yield Obtained (Tonnes)</label>
+                  <input type="number" class="form-control" id="quantity" name="yield" >
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+
+
+                <div class="col-sm-12">
+                  <p><label for="w3review">Any Suggestions or Note: </label></p>
+                    <textarea id="w3review" name="note" rows="4" cols="65"></textarea>
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+
+              <button class="w-100 btn btn-primary btn-lg" type="submit" style="background-color:white; color: black;">Post</button>
+            </form>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+</section >
+
+
+
+
+<!-- Feedback display -->
+<section id="feedbackDisplay">
+   <div class="title " style = "text-align: center;">
+    <h1>What Our Users Say about CULTIVO 😇</h1>
+   </div>
+  <div class="container text-center card-container">
+  <div class="row justify-content-center">
+      {% for row in rows %}
+      <div class="card">
+        <div class="card-body">
+            <h5 class="card-title"><div>Shraddha Pawar</div><div>{{row["city"]}}</div></h5>
+            <p class="card-text"><div>Crop grown: {{row["crop"]}} </div><div>Fertilizer Used: {{row["fertilizer"]}}</div><div>Yield: {{row['perYield']}} tonnes/acre</div></p>
+            <br>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+   </div>
+</section>
+
+
+
+
+<!-- bg-dark -->
+    <!-- footer -->
+    <section id="foot-data">
+      <footer class = " py-5">
+          <div class = "container">
+              <div class = "row text-white g-4">
+                  <div class = "col-md-6 col-lg-3">
+                    <i class="fa-sharp fa-solid fa-spa fa-2x logo-icon align-items-center"></i>
+                      <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">CULTIVO</a>
+                      <p class = "text-black mt-3">A web application that can reside in both your mobile phone and laptop device which provides you with infomation of proper fertilizer needed to be used.</p>
+                  </div>
+<!-- text-muted -->
+                  <div class = "col-md-6 col-lg-3">
+                      <h5 class = "fw-light">Links</h5>
+                      <ul class = "list-unstyled ">
+                          <li class = "my-3">
+                              <a href = "#" class = "text-decoration-none text-black">
+                                  <i class = "fas fa-chevron-right me-1"></i> Home
+                              </a>
+                          </li>
+                          <li class = "my-3">
+                              <a href = "#" class = " text-decoration-none text-black">
+                                  <i class = "fas fa-chevron-right me-1"></i> Contact Us
+                              </a>
+                          </li>
+                          <li class = "my-3">
+                              <a href = "#" class = " text-decoration-none text-black">
+                                  <i class = "fas fa-chevron-right me-1"></i> Chat with Cultivo
+                              </a>
+                          </li>
+                          <li class = "my-3">
+                              <a href = "#" class = " text-decoration-none text-black">
+                                  <i class = "fas fa-chevron-right me-1"></i> About Us
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-3">
+                      <h5 class = "fw-light mb-3">Contact Us</h5>
+                      <div class = "d-flex justify-content-start align-items-start my-2 text-black">
+                          <span class = "me-3">
+                              <i class = "fas fa-map-marked-alt"></i>
+                          </span>
+                          <span class = "fw-light">
+                              Dhankawadi, Pune, 411043, India
+                          </span>
+                      </div>
+                      <div class = "d-flex justify-content-start align-items-start my-2 text-black">
+                          <span class = "me-3">
+                              <i class = "fas fa-envelope"></i>
+                          </span>
+                          <span class = "fw-light">
+                              cultivo.support@gmail.com
+                          </span>
+                      </div>
+                      <div class = "d-flex justify-content-start align-items-start my-2 text-black">
+                          <span class = "me-3">
+                              <i class = "fas fa-phone-alt"></i>
+                          </span>
+                          <span class = "fw-light">
+                              +9786 6776 236
+                          </span>
+                      </div>
+                  </div>
+
+                  <div class = "col-md-6 col-lg-3">
+                      <h5 class = "fw-light mb-3">Follow Us</h5>
+                      <div>
+                          <ul class = "list-unstyled d-flex">
+                              <li>
+                                  <a href = "#" class = "text-black text-decoration-none fs-4 me-4">
+                                      <i class = "fab fa-facebook-f"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href = "#" class = "text-black text-decoration-none fs-4 me-4">
+                                      <i class = "fab fa-twitter"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href = "#" class = "text-black text-decoration-none fs-4 me-4">
+                                      <i class = "fab fa-instagram"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href = "#" class = "text-black text-decoration-none fs-4 me-4">
+                                      <i class = "fab fa-pinterest"></i>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </footer>
+    </section>
+
+    <div class="copyright">
+      <p>Made with ❤️ in India</p>
+    </div>
+    <!-- end of footer -->
+
+
+        <!-- jquery -->
+        <script src = "js/jquery-3.6.0.js"></script>
+        <!-- isotope js -->
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+        <!-- bootstrap js -->
+        <script src = "bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/c225c1452e.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <!-- custom js -->
+        <script src = "js/script.js"></script>
+        <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+          <script src="form-validation.js"></script>
+          <script src="../static/js/feedbackPage.js"></script>
+      </body>
+
+
+    </html>

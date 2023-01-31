@@ -13,6 +13,10 @@ con=sqlite3.connect('database.db')
 con.execute("create table if not exists farmer(pid integer primary key,name text,city text,contact text,password text)")
 con.close()
 
+con=sqlite3.connect('feedback.db')
+con.execute("create table if not exists userFeedback(crop text,fertilizer text,soil text,date text,city text, cropArea real, Yield real, note text, perYield)")
+con.close()
+
 @app.route("/")
 def index():
     return render_template('Visit.html')
@@ -25,9 +29,51 @@ def home():
 def about():
     return render_template('About.html')
 
-@app.route("/contactus")
+@app.route("/contactus", methods=["GET","POST"])
 def contact():
-    return render_template('Contact.html')
+    
+    if request.method=='POST':
+        try:
+            crop=request.form['crop']
+            print(crop)
+            fertilizer = request.form['fertilizer']
+            print(fertilizer)
+            soil = request.form['soil']
+            print(soil)
+            date = request.form['date']
+            print(date)
+            city=request.form['city']
+            print(city)
+            cropArea=request.form['cropArea']
+            print(cropArea)
+            Yield=request.form['yield']
+            print(Yield)
+            note = request.form['note']
+            print(note)
+            perYield = round((float(Yield)/float(cropArea)),2)
+            print(perYield)
+            con=sqlite3.connect("feedback.db")
+            cur=con.cursor()
+            cur.execute("insert into userFeedback(crop, fertilizer, soil, date, city, cropArea, Yield, note, perYield)values(?,?,?,?,?,?,?,?,?)",(crop, fertilizer, soil, date, city, cropArea, Yield, note, perYield))
+            con.commit()
+            flash("Record Added  Successfully","success")
+        except:
+            flash("Error in Insert Operation","danger")
+        finally:
+            con.close()
+            return redirect('contactus')
+
+    else:
+
+        con=sqlite3.connect('feedback.db')
+        con.row_factory = sqlite3.Row
+   
+        cur = con.cursor()
+        cur.execute("select * from userFeedback order by (select perYield) DESC, date DESC LIMIT 8")
+   
+        rows = cur.fetchall(); 
+        con.close()
+        return render_template("FeedbackPage.html",rows = rows)
 
 @app.route("/browseproducts")
 def browse_products():
@@ -115,12 +161,13 @@ def login():
         cur=con.cursor()
         cur.execute("select * from farmer where contact=? and password=?",(contact,password))
         data=cur.fetchone()
-
+    
         if data:
             session["contact"]=data["contact"]
             session["password"]=data["password"]
             return redirect("home")
         else:
+            con.close()
             flash("Username and Password Mismatch","danger")
     return render_template('login.html')
 
@@ -140,8 +187,8 @@ def register():
         except:
             flash("Error in Insert Operation","danger")
         finally:
-            return redirect('login')
             con.close()
+            return redirect('login')
 
     return render_template('register.html')
 
