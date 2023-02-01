@@ -1,42 +1,58 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Modals · Bootstrap v5.3</title>
 
-<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/modals/">
+    <link rel = "stylesheet" href = "../static/css/modal.css">
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
     
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+
+    
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+  </head>
+  <body>
+
+<div class="modal modal-sheet position-static d-block bg-secondary py-5 " tabindex="-1" role="dialog" id="modalSheet">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-4 shadow modal-desi" >
+      <div class="modal-header border-bottom-0 " style="text-align: center;">
+        <h1 class="modal-title fs-3 justify-content-center" ><div class="fetilizer-head">Bonomeal Urea</div></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      
+      <div class="modal-body py-0 modal-main">
+        <div class="row justify-content-center">
+        <div class="image col-6" style = "width:50%; height:50%">
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTjVSkY2atZ2ca-dMs9N7vVRXoqFIehWDCWZtIuP5GzIaIQnaB4nbsEMZSbbOJAcqtDAQ&usqp=CAU"  style = "margin-top: 20%; margin-bottom:10%; width:100%; height: 100% "/>
+        </div>
+        <div class="text col-6">
+        <p style="margin-top:20%; font-weight:bold;">This product is available at: <div style="margin: 5%; "><button type="button" class="btn btn-sm btn-light" style="background-color:#68B984; width:70%">Amazon</button></div> <div style="margin: 5%; left-margin:10%;"><button type="button" class="btn btn-sm btn-light" style="background-color:#68B984; width:70%" >FlipKart</button></div><div style="margin: 5%; left-margin:10%; "><button type="button" class="btn btn-sm btn-light" style="background-color:#68B984; width:70%">Bighaat</button></div><div style="margin: 5%; left-margin:10%; border-radius:2px solid black;"><button type="button" class="btn btn-sm btn-light" style="background-color:#68B984; width:70%; ">AgroTech</button></div></p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 justify-content-center">
+    <p style ="font-weight:bold; padding:2%;">Spring Ever is a combination of humic acid, amino acid, fulvic acid, seaweed extract, cytokinin and organic matter. Spring Ever is non toxic and safe to use.</p>
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer flex-column border-top-0">
+        <button type="button" class="btn btn-lg btn-light w-100 mx-0" style = "background-color: #68B984" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
-  
 </div>
 
-</body>
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      
+  </body>
 </html>
